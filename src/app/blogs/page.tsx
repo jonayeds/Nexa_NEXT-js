@@ -1,6 +1,5 @@
 import BlogCard from "@/components/ui/BlogCard"
 import { Blog } from "@/types"
-import { title } from "process"
 
 export const metadata = {
     title:"NexaBlog | Blogs"
