@@ -1,12 +1,17 @@
+import Form from 'next/form'
+
 const BlogForm = () => {
+  const handleForm = ()=>{
+
+  }
   return (
     <div className="flex items-center justify-center min-h-screen my-10">
       <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg p-6">
-        <form>
+        <Form action={"/blogs"}>
           <h2 className="text-2xl font-semibold mb-6 text-teal-600 text-center">
             Create Blog
           </h2>
-          <div className="grid grid-cols-2 gap-6">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {/* Title */}
             <div>
               <label
@@ -109,7 +114,7 @@ const BlogForm = () => {
           >
             Create
           </button>
-        </form>
+        </Form>
       </div>
     </div>
   );
