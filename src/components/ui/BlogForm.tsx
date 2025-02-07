@@ -2,9 +2,6 @@ import { createBlog } from '@/serverActions/createBlog';
 import Form from 'next/form'
 
 const BlogForm = () => {
-  const handleForm = ()=>{
-
-  }
   return (
     <div className="flex items-center justify-center min-h-screen my-10">
       <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg p-6">

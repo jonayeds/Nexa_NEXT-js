@@ -7,6 +7,15 @@ export const generateStaticParams = async()=>{
     return blogs.slice(0,3).map((item:Blog)=>({blogId:item.id}))
 }
 
+export const generateMetadata = async({params}:{params:Promise<{blogId:string}>})=>{
+    const {blogId} = await params
+    const res = await fetch(`http://localhost:8000/blogs/${blogId}`)
+    const blog = await res.json()
+    return {
+        title:blog.title,
+        description:blog.description
+    }
+}
 
 const BlogDetailsPage =async ({params}:{params:Promise<{blogId:string}>}) => {
     const {blogId} = await params
